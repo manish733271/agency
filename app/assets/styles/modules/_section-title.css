@@ -1,0 +1,26 @@
+.section-title{
+    font-size: 3rem;
+    font-weight: 300;
+    text-align: center;
+
+    strong{
+        font-weight: 500;
+    }
+
+    &__icon{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: .6rem;
+
+        @mixin atSmall{
+            margin-right:0.7rem;
+            /*offseting the margin which we set in default so that we don't want some margin in large screen*/
+            margin-left: 0.5rem;
+            margin-right: 0.5;
+            margin-bottom: 0;
+            /*This means in larger screen star icon remains intact inline eventhough it is set block*/
+            display: inline-block; 
+        }
+    }
+}
