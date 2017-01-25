@@ -1,0 +1,64 @@
+.row{
+
+    /*background-color: yellow;*/
+     @mixin clearfix;
+
+     &--gutters {
+         /* */
+         margin-right: -65px; 
+     }
+
+     /*read down notes*/
+     &--gutters > div {
+        padding-right: 65px; 
+        box-sizing: border-box;
+     }
+
+     &__b-margin-until-medium{
+         margin-bottom: 1.5rem;
+
+     }
+      
+     @mixin atMedium {
+
+         &__b-margin-until-medium{
+         margin: 0;
+         }
+
+        &__medium-4{
+        /*float has problem so it has be cleared always*/
+            float: left; 
+            width: 33.33%;
+        }
+
+        &__medium-4--larger {
+            width: 37%;
+        }
+
+        &__medium-8{
+        float:left;
+        width: 66.66%;
+        }
+
+        &__medium-8--smaller{
+            width: 63%;
+        }
+     }
+
+   
+}
+
+ /*Selecting only children, not the parent div with row class*/
+    /*&--gutters > div {
+        padding-right: 65px; 
+        box-sizing: border-box;
+        /*padding value can offet the width so be careful*/
+        /*Webbrowsers add padding value to width 65px + 100% so row breaks down; borderbox allows to keep it*/
+      /*}
+    }*/
+
+
+
+
+     
+   

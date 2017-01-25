@@ -1,0 +1,30 @@
+.wrapper {
+    /*background-color: green;*/
+    padding-left: 18px;
+    padding-right: 18px;
+    /*hides the overflowing margin or overflowing background -- related to _row.css*/
+    /*Negative margin still exists in _row.css but hidden hides the space*/
+    overflow: hidden; 
+
+    /*added padding values to 1200px*/
+    max-width: 1236px; 
+    margin-right: auto;
+    margin-left: auto;
+
+    &--medium{
+        max-width: 976px;
+    }
+
+    &--b-margin{
+         margin-bottom: 1rem;
+        @mixin atSmall{
+          margin-bottom: 3.875rem;  
+        }     
+    }
+
+    /*remove padding for image to stretch in small screen*/
+    .wrapper { 
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
