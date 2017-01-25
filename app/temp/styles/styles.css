@@ -589,6 +589,32 @@ a {
   max-width: 976px;
 }
 
+.wrapper--no-padding-until-medium{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (min-width: 800px) {
+
+  .wrapper--no-padding-until-medium {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+.wrapper--no-padding-until-large{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (min-width: 1010px) {
+
+  .wrapper--no-padding-until-large {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
 .wrapper--b-margin{
   margin-bottom: 1rem;
 }
@@ -621,6 +647,40 @@ a {
 .page-section--blue {
   background-color: #2f5572;
   color: #fff;
+}
+
+.page-section--no-b-padding-until-medium{
+  padding-bottom: 0;
+}
+
+@media (min-width: 800px) {
+
+  .page-section--no-b-padding-until-medium {
+    padding: 4.5rem 0;
+  }
+}
+
+.page-section--no-b-padding-until-large{
+  padding-bottom: 0;
+}
+
+@media (min-width: 1010px) {
+
+  .page-section--no-b-padding-until-large {
+    padding: 4.5rem 0;
+  }
+}
+
+.page-section--testimonials {
+  background-color: #e0e6ef;
+}
+
+@media (min-width: 1010px) {
+
+  .page-section--testimonials {/*//top and horizontally centered background image*/
+    background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;/*background image should just cover the containing div */
+    background-size: cover;
+  }
 }
 
 .headline{
@@ -685,12 +745,20 @@ a {
   display: table;
 }
 
-.row--gutters {/* */
+.row--t-padding{
+  padding-top: 80px;
+}
+
+.row--gutters {/* offsetiing gutter expecially in the last column to remove any space*/
   margin-right: -65px;
 }
 
 .row--gutters-large {
   margin-right: -100px;
+}
+
+.row--gutters-small{
+  margin-right: -45px;
 }
 
 /*read down notes*/
@@ -702,6 +770,10 @@ a {
 
 .row--gutters-large > div {
   padding-right: 100px;
+}
+
+.row--gutters-small > div {
+  padding-right: 45px;
 }
 
 .row__b-margin-until-medium{
@@ -739,6 +811,79 @@ a {
   .row__medium-8--smaller {
     width: 63%;
   }
+}
+
+@media (min-width: 1010px) {
+
+  .row {/*take this width when screen goes to medium range, adjusting width*/
+  }
+
+  .row__b-margin-until-large {
+    margin: 0;
+  }
+
+  .row__mlarge-4 {/*float has problem so it has be cleared always*/
+    float: left;
+    width: 33.33%;
+  }
+
+  .row__large-4--larger {
+    width: 37%;
+  }
+
+  .row__large-6 {
+    float: left;
+    width: 50%;
+  }
+
+  .row__large-8 {
+    float: left;
+    width: 66.66%;
+  }
+
+  .row__large-8--smaller {
+    width: 63%;
+  }
+}
+
+/*Begin equal height rules*/
+
+@media (min-width: 800px) {
+
+  .row--equal-height-at-medium {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+/*Stop floating left and follow flexbox rules*/
+
+.row--equal-height-at-medium > div {
+  float:none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/*Begin equal height rules*/
+
+@media (min-width: 1010px) {
+
+  .row--equal-height-at-large {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+/*Stop floating left and follow flexbox rules*/
+
+.row--equal-height-at-large > div {
+  float:none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 /*Selecting only children, not the parent div with row class*/
@@ -783,6 +928,10 @@ font weight of 400 is normal*/
   font-weight: 500;
 }
 
+.section-title--blue{
+  color: #2f5572;
+}
+
 .section-title__icon{
   display: block;
   margin-left: auto;
@@ -792,7 +941,9 @@ font weight of 400 is normal*/
 
 @media (min-width: 550px) {
 
-  .section-title__icon {
+  .section-title__icon {/*top with push 8px down to relative position inside the div*/
+    position: relative;
+    top: 8px;
     margin-right: 0.7rem;/*offseting the margin which we set in default so that we don't want some margin in large screen*/
     margin-left: 0.5rem;
     margin-right: 0.5;
@@ -814,7 +965,7 @@ font weight of 400 is normal*/
   }
 }
 
-.feature-item__icon{
+.feature-item__icon{/*this display pushes star icon up in small screen*/
   display: block;
   margin: 0 auto;
 }
@@ -842,4 +993,49 @@ font weight of 400 is normal*/
     margin-top: 1em;
     font-size: 1.875rem;
   }
+}
+
+.testimonial{
+    background-color: rgba(255,255,255, .7);
+    padding: 0 18px 1px 18px;
+    margin-bottom: 98px;
+}
+
+@media (min-width: 1010px) {
+
+  .testimonial {
+    margin-bottom: 0;
+    padding: 0 1.8125rem 1px 1.8125rem;
+  }
+}
+
+.testimonial--last{
+  margin-bottom: 0;
+}
+
+.testimonial__photo{
+  border-radius: 80px;/*as image is inside div - to remove div occuping spacing and show image border*//*exact height and width should also be put to display the all rounded borders*/
+  overflow: hidden;
+  width: 160px;
+  height: 160px;
+  margin: 0 auto -80px auto;
+  position: relative;
+  top: -80px;
+  border: 6px solid rgba(255,255,255, .7);
+}
+
+.testimonial__title{
+  color: #2f5572;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.testimonial__subtitle{
+  color: #d59541;
+  text-align: center;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  margin: .25rem 0 1rem 0;
 }

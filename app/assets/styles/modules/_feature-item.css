@@ -8,7 +8,8 @@
     }
 
     &__icon{
-        display: block;
+        /*this display pushes star icon up in small screen*/
+        display: block; 
         margin: 0 auto;
         @mixin atSmall {
             position: absolute;

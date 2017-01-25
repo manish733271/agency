@@ -7,6 +7,10 @@
         font-weight: 500;
     }
 
+    &--blue{
+        color: $mainBlue;
+    }
+
     &__icon{
         display: block;
         margin-left: auto;
@@ -14,6 +18,11 @@
         margin-bottom: .6rem;
 
         @mixin atSmall{
+            
+            /*top with push 8px down to relative position inside the div*/
+            position:relative; 
+            top: 8px; 
+
             margin-right:0.7rem;
             /*offseting the margin which we set in default so that we don't want some margin in large screen*/
             margin-left: 0.5rem;
