@@ -478,6 +478,107 @@ a {
     color: #d59541;
 }
 
+.site-header{
+    /*so that it takes only required space*/
+    position: absolute;
+    /*z-index separates two overlapping div and whichever has highest value keeps on front*/
+    z-index: 2;
+    padding: 10px;
+    width: 100%;
+}
+
+@media (min-width: 800px) {
+
+  .site-header {
+    background-color: rgba(47,85,114, 0.3);
+  }
+}
+
+.site-header__btn-container {
+  float: right;
+}
+
+.site-header__logo{/*taking logo out of the header space and leaving it to hand free so it comes out of space- absolute position*/
+  position: absolute;
+  top: 0;
+  left:50%;/*scale reduces the image current scale - example from 100% to 80% - this is for small screen*/
+  -webkit-transform: translateX(-50%) scale(.8);
+          transform: translateX(-50%) scale(.8);/*made vertical origin to 0*/
+  -webkit-transform-origin: 50% 0%;
+          transform-origin: 50% 0%;
+  background-color: #2f5572;
+  padding: 25px 36px;
+}
+
+@media (min-width: 800px) {
+
+  .site-header__logo {
+    left: auto;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+.site-header__logo__graphic{/*hiding text content inside div */
+  text-indent: -9999px;
+}
+
+.site-header__menu-icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 10px;
+  right:10px;
+  background-color: #fff;
+}
+
+@media (min-width: 800px) {
+
+  .site-header__menu-icon {
+    display: none;
+  }
+}
+
+.site-header__menu-content{
+  display: none;
+}
+
+@media (min-width: 800px) {
+
+  .site-header__menu-content {
+    display: block;
+  }
+}
+
+.primary-nav--pull-right{
+  float: right;
+}
+
+.primary-nav ul{
+  margin: 0;
+  padding:0;
+}
+
+.primary-nav ul::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.primary-nav li {
+  list-style: none;
+  float: left;
+  padding-right: 20px;
+}
+
+.primary-nav a{
+  color: white;
+  text-decoration: none;
+  font-weight: 300;/*this display block is tricky here*/
+  display: block;
+  padding: 12px 0;
+}
+
 .large-hero{
     position: relative;
     border-bottom: 10px solid #2f5572;
@@ -489,12 +590,20 @@ a {
 
 .large-hero__text-content{
   position: absolute;
+  padding-top:88px;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   left: 0;
   width: 100%;
   text-align: center;
+}
+
+@media (min-width: 800px) {
+
+  .large-hero__text-content {
+    padding-top: 60px;
+  }
 }
 
 .large-hero__title{
