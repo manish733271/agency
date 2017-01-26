@@ -1,0 +1,24 @@
+/*loops all images in sprite  shapes*/
+/*triple bracket for not escaping / in svg/sprite*/
+/*Code inside first loop runs only once so background image is created only once*/
+
+
+
+
+{{#shapes}}
+
+    {{#first}}
+        .icon {
+            background-image: url('/assets/images/sprites/{{{sprite}}}');
+            }
+    {{/first}}
+
+
+    .icon--{{base}} {
+
+        width: {{ width.outer }}px ;
+        height: {{ height.outer }}px;
+        background-position: {{position.relative.xy}}
+    }
+
+{{/shapes}} 

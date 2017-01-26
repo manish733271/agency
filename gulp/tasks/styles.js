@@ -16,3 +16,9 @@ gulp.task('styles', function(){
     })
     .pipe(gulp.dest('./app/temp/styles'));
 });
+
+
+//Gulp is generating CSS and copying to root app styles.css gulp file from asset/temp/sprite file, and style.js
+//is integrating all in style.css
+
+//temp/sprite file can be completely deleleted but I am keeping for understanding purpose
