@@ -1416,3 +1416,19 @@ font weight of 400 is normal*/
         height: 42px;
         background-position: 36.69752421959096% 45.792307692307695%
     }
+
+.manipulate-item-on-scroll {
+    opacity: 0;
+    -webkit-transition: all 1.5s ease-out;
+    transition: all 1.5s ease-out;
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+}
+
+.manipulate-item-on-scroll--is-visible{
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+/*transition: all refeflects for all properties to transform - both opacity and scale*/
