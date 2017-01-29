@@ -56,6 +56,12 @@
             font-size: 1rem;
             padding: 12px 0;
             background-color: transparent;
+
+            /*from javascript to highlight headers when scrolling*/
+            &.is-current-link {
+                color: #fabb69;
+            }
+
         }
     }
 }

@@ -502,7 +502,12 @@ a {
 @media (min-width: 800px) {
 
   .site-header {
+    position: fixed;
     background-color: rgba(47,85,114, 0.3);
+  }
+
+  .site-header--dark {
+    background-color: rgba(23,51,72, 0.9);
   }
 }
 
@@ -520,7 +525,11 @@ a {
   top: 0;
   left:50%;/*scale reduces the image current scale - example from 100% to 80% - this is for small screen*/
   -webkit-transform: translateX(-50%) scale(.8);
-          transform: translateX(-50%) scale(.8);/*made vertical origin to 0*/
+          transform: translateX(-50%) scale(.8);
+  -webkit-transition: -webkit-transform .6s ease-out;
+  transition: -webkit-transform .6s ease-out;
+  transition: transform .6s ease-out;
+  transition: transform .6s ease-out, -webkit-transform .6s ease-out;/*made vertical origin to 0*/
   -webkit-transform-origin: 50% 0%;
           transform-origin: 50% 0%;
   background-color: #2f5572;
@@ -531,8 +540,13 @@ a {
 
   .site-header__logo {
     left: auto;
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);/*this comes from stickyheader js to compress when scrolling*//*& gives the selector for logo element and below selector will select logo element*//*This means it will select _site-header__logo elements only when dark property is used*/
+  }
+
+  .site-header--dark .site-header__logo {
+    -webkit-transform: scale(.57);
+            transform: scale(.57);
   }
 }
 
@@ -727,7 +741,11 @@ a {
   .primary-nav a {
     font-size: 1rem;
     padding: 12px 0;
-    background-color: transparent;
+    background-color: transparent;/*from javascript to highlight headers when scrolling*/
+  }
+
+  .primary-nav a.is-current-link {
+    color: #fabb69;
   }
 }
 
