@@ -11,8 +11,12 @@
     margin-right: auto;
     margin-left: auto;
 
-    &--medium{
+    &--medium {
         max-width: 976px;
+    }
+
+    &--narrow {
+        max-width: 476px;
     }
 
     &--no-padding-until-medium{

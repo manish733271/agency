@@ -83,6 +83,7 @@
             &::before {
                 content:""; 
                 margin-top: 10px;
+                margin-right: 10px;
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -97,6 +98,7 @@
 
             &__middle {
                 margin-top: 10px;
+                margin-right: 10px;
                 position: absolute;
                 top: 8px;
                 left: 0;
@@ -114,6 +116,7 @@
             &::after {
                 content: "";
                 margin-top: 10px;
+                margin-right: 10px;
                 position: absolute;
                 /*bottom: 0px;*/
                 top: 16px;
