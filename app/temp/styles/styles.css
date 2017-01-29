@@ -963,7 +963,7 @@ a {
 
 @media (min-width: 1010px) {
 
-  .page-section--testimonials {/*//top and horizontally centered background image*/
+  .page-section--testimonials.lazyloaded {/*//top and horizontally centered background image*/
     background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;/*background image should just cover the containing div */
     background-size: cover;
   }
